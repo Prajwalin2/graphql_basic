@@ -1,0 +1,15 @@
+type Greeting {
+  id: Int
+  message: String!
+}
+
+type Query {
+  findAllGreeting: [Greeting]
+  getGreeting(id: Int): Greeting
+}
+
+type Mutation {
+  newGreeting(message: String!): Greeting!
+  deleteGreeting(id: Int) : Boolean
+    updateGreeting(message: String!, id: Int) : Greeting!
+}
